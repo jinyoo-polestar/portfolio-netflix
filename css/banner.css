@@ -52,7 +52,11 @@
 
 @media screen and (max-width: 600px) {
   .banner {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
+  }
+
+  .banner-content {
+    width: 100%;
   }
 
   .banner__image {

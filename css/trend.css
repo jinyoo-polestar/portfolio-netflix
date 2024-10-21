@@ -57,15 +57,15 @@
 .slider__btn-left, .slider__btn-right  {
   display: none;
   position: sticky;
-  transform: translateY(50%);
   width: 1.5rem;
   height: 7.5rem;
   align-items: center;
   border-radius: .5rem;
   background-color: var(--color-gray);
-  z-index: 1;
-  cursor: pointer;
+  transform: translateY(50%);
   transition: opacity 400ms ease-in-out;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .slider__btn-left {

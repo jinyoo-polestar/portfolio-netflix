@@ -57,9 +57,8 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color-white);
-  overflow-x: hidden;
   background-color: var(--color-black);
-  font-family: Roboto,'Helvetica Neue', sans-serif;
+  font-family: Roboto,'Helvetica Neue', sans-serif; 
 }
 
 button {
