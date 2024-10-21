@@ -25,38 +25,38 @@ const qnaScript = [
   },
   ]
 
-const qnaWrapper = document.querySelector('.qna-wrapper');
+const $qnaWrapper = document.querySelector('.qna-wrapper');
   
 for (const item of qnaScript) {
   
   // Create question box
-  let questionBox = document.createElement('div');
-  questionBox.className = 'qna__item'; 
-  questionBox.innerText = item.question; 
-  qnaWrapper.appendChild(questionBox); 
+  let $questionBox = document.createElement('div');
+  $questionBox.className = 'qna__item'; 
+  $questionBox.innerText = item.question; 
+  $qnaWrapper.appendChild($questionBox); 
 
   // Create answer box
   let answerBox = document.createElement('div');
   answerBox.className = 'qna__answer'; 
   answerBox.innerText = item.answer; 
   answerBox.style.display = 'none';
-  qnaWrapper.appendChild(answerBox); 
+  $qnaWrapper.appendChild(answerBox); 
 
-  // 하나 보이면 다 닫기, 클릭하면 + 표시 돌아가게
-  questionBox.addEventListener('click', () => {
+  // Click Effect
+  $questionBox.addEventListener('click', () => {
     const isVisible = answerBox.style.display === 'block';
 
     // Close all other answer boxes
     const allAnswerBoxes = document.querySelectorAll('.qna__answer');
     allAnswerBoxes.forEach(box => {
       box.style.display = 'none';
-      questionBox.classList.remove('active');
+      $questionBox.classList.remove('active');
     });
 
     // If it was not visible, show it
     if (!isVisible) {
       answerBox.style.display = 'block';
-      questionBox.classList.add('active');
+      $questionBox.classList.add('active');
     }
   });
 }
