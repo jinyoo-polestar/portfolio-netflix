@@ -10,10 +10,18 @@
 }
 
 .slider__wrapper {
+  width: 100%;
+  overflow: scroll hidden;
+}
+
+.slider__wrapper::-webkit-scrollbar{
+  display: none;
+}
+
+.slider__list {
   display: flex;
   position: relative;
-  overflow: hidden;
-  user-select: none;
+  transition: transform 0.3s ease;
 }
 
 .card__item {
@@ -45,26 +53,24 @@
   text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white);
 }
 
-.slider__btn-left {
+.slider__btn-left, .slider__btn-right  {
   display: none;
   position: absolute;
-  left: 0;
+  transform: translateY(50%);
   width: 1.5rem;
   height: 7.5rem;
-  border-radius: .25rem;
+  align-items: center;
+  border-radius: .5rem;
   background-color: var(--color-gray);
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
+  transition: opacity 400ms ease-in-out;
+}
+
+.slider__btn-left {
+  left: 0;
 }
 
 .slider__btn-right {
-  display: none;
-  position: absolute;
   right: 0;
-  width: 1.5rem;
-  height: 7.5rem;
-  border-radius: .25rem;
-  background-color: var(--color-gray);
-  z-index: 2;
-  cursor: pointer;
 }

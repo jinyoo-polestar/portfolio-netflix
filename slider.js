@@ -1,18 +1,33 @@
-const slide = document.querySelector('.slide-content');
-const slideItems = document.querySelectorAll('.card');
+const sliderWrapper = document.querySelector('.slider__wrapper');
+const leftBtn = document.querySelector('.slider__btn-left');
+const rightBtn = document.querySelector('.slider__btn-right');
 
-const prevBtn = document.querySelector('.left-btn');
-const nextBtn = document.querySelector('.right-btn');
+function updateButtons() {
+    const currentScrollPosition = sliderWrapper.scrollLeft;
+    const maxScrollPosition = sliderWrapper.scrollWidth - sliderWrapper.clientWidth; 
 
-nextBtn.addEventListener('click', () => {
-    alert('Next button clicked'); // 버튼 클릭 로그
-    document.querySelector('.slide-content').style.transform = 'translate(-10vw)'
+    leftBtn.style.display = currentScrollPosition === 0 ? 'none' : 'flex';
+    rightBtn.style.display = currentScrollPosition >= maxScrollPosition ? 'none' : 'flex';
+}
+
+leftBtn.addEventListener('click', function() {
+   // Move by one screen width
+    sliderWrapper.scrollBy({ left: -sliderWrapper.clientWidth, behavior: 'smooth' });
 });
 
-prevBtn.addEventListener('click', () => {
-  alert('Prev button clicked'); // 버튼 클릭 로그
-  document.querySelector('.slide-content').style.transform = 'translate(10vw)'
-  // slideItems.forEach((item) => {
-  //     item.style.width = '800px'; // 각 카드의 너비를 800px로 설정
-  // });
+rightBtn.addEventListener('click', function() {
+    const remainingScroll = sliderWrapper.scrollWidth - sliderWrapper.scrollLeft - sliderWrapper.clientWidth;
+    
+    if (remainingScroll < sliderWrapper.clientWidth) {
+        // If remaining scroll is less than one screen width, move only the remaining amount
+        sliderWrapper.scrollBy({ left: remainingScroll, behavior: 'smooth' });
+    } else {
+        // Move by one screen width
+        sliderWrapper.scrollBy({ left: sliderWrapper.clientWidth, behavior: 'smooth' });
+    }
 });
+
+// Update button visibility when scrolling
+sliderWrapper.addEventListener('scroll', updateButtons);
+
+updateButtons();
