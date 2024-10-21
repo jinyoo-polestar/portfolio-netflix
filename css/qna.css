@@ -1,0 +1,48 @@
+.qna {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.qna__item {
+  position: relative;
+  margin-top: .5rem;
+  padding: 1.5rem;
+  background-color: var(--color-gray);
+  font-size: 1.5rem; 
+  cursor: pointer;
+}
+
+.qna__item:hover {
+  background-color: var(--color-light-gray);
+}
+
+.qna__item::after {
+  content: url('/images/plus.svg');
+  position: absolute;
+  width: 1.5rem;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%) rotate(0deg); 
+}
+
+.qna__item.active::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.qna__answer {
+  position: relative;
+  padding: 1.5rem;
+  background-color: var(--color-gray);
+  border-top: 1px solid var(--color-black);
+  font-size: 1.5rem; 
+}
+
+@media screen and (max-width: 600px) {
+  .qna__item {
+    font-size: 1rem;
+  }
+
+  .qna__answer {
+    font-size: 1rem;
+  }
+}

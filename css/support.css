@@ -1,0 +1,41 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.support__link {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.support__menu span {
+  text-decoration: underline;
+}
+
+.support__link-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.support__link { 
+  width: 33%;
+  margin-top: .75rem;
+  text-decoration: underline;
+  list-style: none;
+  font-size: .875rem;
+  color: var(--color-light-gray);
+}
+
+.support__link:visited {
+  color: var(--color-light-gray);
+}
+
+@media screen and (max-width: 600px) {
+  .support__link { 
+    width: 100%;
+  }
+}

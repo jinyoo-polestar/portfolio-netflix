@@ -1,0 +1,70 @@
+.trend {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.select__country, .select__content {
+  float: left;
+  margin-right: 1rem;
+}
+
+.slider__wrapper {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.card__item {
+  display: block;
+  position: relative;
+  width: 13.75rem;
+  height: 19.6875rem;
+  margin-right: 3rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.card__item:hover {
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.card__img {
+  border-radius: .5rem;
+}
+
+.card__rank {
+  position: absolute;
+  bottom: 2rem;
+  left: -2rem;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-black);
+  text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white);
+}
+
+.slider__btn-left {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  height: 7.5rem;
+  border-radius: .25rem;
+  background-color: var(--color-gray);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider__btn-right {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 1.5rem;
+  height: 7.5rem;
+  border-radius: .25rem;
+  background-color: var(--color-gray);
+  z-index: 2;
+  cursor: pointer;
+}
