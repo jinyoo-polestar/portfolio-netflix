@@ -10,6 +10,8 @@
 }
 
 .slider__wrapper {
+  display: flex;
+  position: relative;
   width: 100%;
   overflow: scroll hidden;
 }
@@ -19,8 +21,7 @@
 }
 
 .slider__list {
-  display: flex;
-  position: relative;
+  display: inline-flex;
   transition: transform 0.3s ease;
 }
 
@@ -29,7 +30,7 @@
   position: relative;
   width: 13.75rem;
   height: 19.6875rem;
-  margin-right: 3rem;
+  margin: 0 0 0 2rem;
   border-radius: .5rem;
   cursor: pointer;
 }
@@ -55,7 +56,7 @@
 
 .slider__btn-left, .slider__btn-right  {
   display: none;
-  position: absolute;
+  position: sticky;
   transform: translateY(50%);
   width: 1.5rem;
   height: 7.5rem;
@@ -72,5 +73,5 @@
 }
 
 .slider__btn-right {
-  right: 0;
+  right: 0rem;
 }
