@@ -1,11 +1,11 @@
-@import url('/css/header.css');
-@import url('/css/main.css');
-@import url('/css/banner.css');
-@import url('/css/trend.css');
-@import url('/css/benefit.css');
-@import url('/css/qna.css');
-@import url('/css/footer.css');
-@import url('/css/support.css');
+@import url('css/header.css');
+@import url('css/main.css');
+@import url('css/banner.css');
+@import url('css/trend.css');
+@import url('css/benefit.css');
+@import url('css/qna.css');
+@import url('css/footer.css');
+@import url('css/support.css');
 
 .roboto-thin {
   font-family: "Roboto", sans-serif;
