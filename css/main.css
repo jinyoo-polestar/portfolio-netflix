@@ -11,7 +11,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/f272782d-cf96-4988-a675-6db2afd165e0/web/KR-ko-20241008-TRIFECTA-perspective_bf6e7214-2821-4630-a966-bd4bb0d6b526_large.jpg');
+  background-image: url('/images/bg_netflix.jpg');
   z-index: -1;
 }
 

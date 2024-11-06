@@ -86,7 +86,7 @@ select {
 }
 
 .select__language {
-  background-image: url('/images/language.svg');
+  background-image: url('/images/ic_language_white.svg');
   background-repeat: no-repeat;
   background-position: .5rem;
   padding-left: 1.5rem;

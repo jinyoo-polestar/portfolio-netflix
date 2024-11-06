@@ -17,7 +17,7 @@
 }
 
 .qna__item::after {
-  content: url('/images/plus.svg');
+  content: url('/images/ic_plus_white.svg');
   position: absolute;
   width: 1.5rem;
   top: 50%;
