@@ -4,7 +4,7 @@
   gap: 1.5rem;
 }
 
-.select__country, .select__content {
+#select__country, #select__content {
   float: left;
   margin-right: 1rem;
 }
@@ -13,7 +13,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  overflow: scroll hidden;
+  overflow: hidden scroll;
 }
 
 .slider__wrapper::-webkit-scrollbar{
@@ -25,17 +25,18 @@
   transition: transform 0.3s ease;
 }
 
-.card__item {
+.slider__card {
   display: block;
   position: relative;
   width: 13.75rem;
   height: 19.6875rem;
+  align-content: center;
   margin: 0 0 0 2rem;
   border-radius: .5rem;
   cursor: pointer;
 }
 
-.card__item:hover {
+.slider__card :hover {
   transform: scale(1.1);
   transition: .5s;
 }
@@ -60,6 +61,7 @@
   width: 1.5rem;
   height: 7.5rem;
   align-items: center;
+  justify-content: center;
   border-radius: .5rem;
   background-color: var(--color-gray);
   transform: translateY(50%);
@@ -73,5 +75,5 @@
 }
 
 .slider__btn-right {
-  right: 0rem;
+  right: 0;
 }

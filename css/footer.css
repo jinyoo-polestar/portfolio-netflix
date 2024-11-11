@@ -9,13 +9,13 @@
   color: var(--color-light-gray);
 }
 
-.footer p {
+.footer__info {
   margin: .25rem .25rem .25rem 0;
   text-align: left;
   font-size: .75rem;
 }
 
-.footer a {
+.footer__site {
   margin: .25rem .25rem .25rem 0;
   text-align: left;
   text-decoration: underline;

@@ -7,12 +7,6 @@
 @import url('/css/footer.css');
 @import url('/css/support.css');
 
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
 .roboto-light {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -31,18 +25,6 @@
   font-style: normal;
 }
 
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
 :root {
   --color-primary: red;
   --color-white: white;
@@ -58,26 +40,29 @@ body {
   padding: 0;
   color: var(--color-white);
   background-color: var(--color-black);
-  font-family: Roboto,'Helvetica Neue', sans-serif; 
+  font-family: "Roboto",'Helvetica Neue', sans-serif; 
 }
 
 button {
-  padding: .5rem 1rem;
-  background-color: var(--color-primary);
   border: none;
-  border-radius: .25rem;
-  color: var(--color-white);
   cursor: pointer;
-  font-size: 1rem;
 }
 
-button:hover {
+.btn {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  color: var(--color-white);
+}
+
+.btn:hover {
   background-color: rgb(193, 17, 25);
 }
 
-select {
+.select {
   padding: .5rem 1rem;
-  background-color: black;
+  width: fit-content;
+  background-color: var(--color-black);
   opacity: 0.8;
   color: var(--color-white);
   border-radius: .25rem;
@@ -87,9 +72,13 @@ select {
 
 .select__language {
   background-image: url('/images/ic_language_white.svg');
+  background-color: unset;
   background-repeat: no-repeat;
-  background-position: .5rem;
+  background-position: 0;
+  width: fit-content;
   padding-left: 1.5rem;
+  border: none;
+  color: var(--color-white);
 }
 
 input {
@@ -122,49 +111,32 @@ p, a {
   padding: 0 22.125rem 6rem;
 }
 
-.membership {
-  width: 100%;
-  flex-wrap: wrap;
+.signup {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
-.membership-form {
-  display: flex;
-  justify-content: center;
-}
-
-.start-btn,
-.membership__button {
-  display: flex;
-  width: fit-content;
-  font-size: 1.125rem;
-  padding: .75rem 1.5rem;
-  align-items: center;
-}
-
-
-.membership__button div {
-  margin-left: .75rem;
-}
-
-
-.membership-form {
+.signup-form {
   position: relative;
 }
 
-.membership__email {
+.signup__label {
   position: absolute;
   left: 1rem;
-  top: 30%;
+  top: 40%;
   transition: all 0.3s ease; 
-  font-size: 16px; /* 기본 크기 */
+  font-size: 16px; 
   pointer-events: none;
 }
 
-#membership__email {
+.signup__label.active {
+  font-size: .75rem;
+  transform: translateY(-.6rem);
+}
+
+#signup__input {
   box-sizing: border-box;
   width: 31.25rem;
   height: 3.5rem;
@@ -172,9 +144,12 @@ p, a {
   font-size: 1rem;
 }
 
-#membership__email:focus ~ .membership__email{
-  font-size: .625rem;
-  top: 20%;
+.signup__btn {
+  display: flex;
+  font-size: 1.125rem;
+  padding: .75rem 1.5rem;
+  align-items: center;
+  background-color: var(--color-primary);
 }
 
 @media screen and (max-width: 900px) {
@@ -182,17 +157,15 @@ p, a {
     padding: 0 1.5rem;
   }
 
-  .membership-form {
-    width: 100%;
-    margin-top: 1rem;
+  .signup-form {
     flex-direction: column;
   }
 
-  .membership__button {
+  .signup__btn {
     padding: .5rem 1rem;
   }
 
-  #membership__email  {
+  #signup__input  {
     width: 100%;
   }
 }
