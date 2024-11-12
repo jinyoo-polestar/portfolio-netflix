@@ -60,25 +60,46 @@ button {
 }
 
 .select {
-  padding: .5rem 1rem;
-  width: fit-content;
+  padding: .5rem .5rem .5rem .5rem;
   background-color: var(--color-black);
-  opacity: 0.8;
-  color: var(--color-white);
   border-radius: .25rem;
-  border: 1px solid var(--color-gray);
   font-size: 1rem;
+  color: var(--color-white);
 }
 
 .select__language {
+  padding: .5rem 2rem;
   background-image: url('/images/ic_language_white.svg');
   background-color: unset;
   background-repeat: no-repeat;
-  background-position: 0;
+  background-position: .4rem;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gray);
+  opacity: 0.8;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.header__language-select,
+.support__language-select{
+  position: relative;
   width: fit-content;
-  padding-left: 1.5rem;
-  border: none;
-  color: var(--color-white);
+}
+
+.header__language-select::after {
+  content: "▼";
+  font-size: .75rem;
+  top: .7rem;
+  right: .8rem;
+  position: absolute;
+}
+
+.support__language-select::after {
+  content: "▼";
+  font-size: .75rem;
+  top: .7rem;
+  right: .8rem;
+  position: absolute;
 }
 
 input {
@@ -111,6 +132,19 @@ p, a {
   padding: 0 22.125rem 6rem;
 }
 
+@media screen and (max-width: 900px) {
+  .layout {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width:1900px) {
+  .layout {
+    padding: 0 9.25rem;
+  }
+}
+
+
 .signup {
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +154,13 @@ p, a {
 
 .signup-form {
   position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  .signup-form {
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
 
 .signup__label {
@@ -136,7 +177,7 @@ p, a {
   transform: translateY(-.6rem);
 }
 
-#signup__input {
+.signup__input {
   box-sizing: border-box;
   width: 31.25rem;
   height: 3.5rem;
@@ -144,8 +185,14 @@ p, a {
   font-size: 1rem;
 }
 
-.signup__btn {
-  display: flex;
+@media screen and (max-width: 900px) {
+  .signup__input  {
+    width: 100%;
+  }
+}
+
+.signup__submit-btn {
+  display: inline-flex;
   font-size: 1.125rem;
   padding: .75rem 1.5rem;
   align-items: center;
@@ -153,25 +200,7 @@ p, a {
 }
 
 @media screen and (max-width: 900px) {
-  .layout {
-    padding: 0 1.5rem;
-  }
-
-  .signup-form {
-    flex-direction: column;
-  }
-
-  .signup__btn {
+  .signup__submit-btn {
     padding: .5rem 1rem;
-  }
-
-  #signup__input  {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width:1900px) {
-  .layout {
-    padding: 0 9.25rem;
   }
 }

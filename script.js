@@ -1,12 +1,17 @@
 // Email Form Controller
-const $signupEmailInput = document.querySelector('#signup__input');
-const $signupEmailLabel = document.querySelector('.signup__label');
+const $signupEmailInputs = document.querySelectorAll('.signup__input');
+const $signupEmailLabels = document.querySelectorAll('.signup__label');
 
-$signupEmailInput.addEventListener('focus', () => $signupEmailLabel.classList.add('active'));
-$signupEmailInput.addEventListener('blur', () => {
-  if ($signupEmailInput.value === "") {
-    $signupEmailLabel.classList.remove('active');
-  }
+$signupEmailInputs.forEach(($input, index) => {
+  const $signupEmailLabel = $signupEmailLabels[index];
+
+  $input.addEventListener('focus', () => $signupEmailLabel.classList.add('active'));
+
+  $input.addEventListener('blur', () => {
+    if ($input.value === "") {
+      $signupEmailLabel.classList.remove('active');
+    }
+  });
 });
 
 

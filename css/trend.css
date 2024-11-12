@@ -4,19 +4,23 @@
   gap: 1.5rem;
 }
 
+.trend .trend__select {
+  border: none;
+}
+
 #select__country, #select__content {
   float: left;
   margin-right: 1rem;
 }
 
-.slider__wrapper {
+.trend__slider {
   display: flex;
   position: relative;
   width: 100%;
   overflow: hidden scroll;
 }
 
-.slider__wrapper::-webkit-scrollbar{
+.trend__slider::-webkit-scrollbar{
   display: none;
 }
 
@@ -36,7 +40,7 @@
   cursor: pointer;
 }
 
-.slider__card :hover {
+.slider__card:hover {
   transform: scale(1.1);
   transition: .5s;
 }
