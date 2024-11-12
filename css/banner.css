@@ -1,10 +1,10 @@
 .banner {
-  display: flex;
   position: relative;
-  width: 100%;
-  margin : 5rem 0 2rem;
+  display: flex;
   gap: 1rem;
   align-items: center;
+  margin : 5rem 0 2rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -18,18 +18,14 @@
   transition: linear 300ms;
 }
 
-.banner:hover .banner-content {
-  background: linear-gradient(90deg, rgba(117, 0, 219, 0.32) 0%, rgba(94, 24, 164, 0.328) 49%, rgba(0, 54, 124, 0.361) 100%);
-}
-
 .banner-content {
-  display: block;
   position: relative;
-  width: 100%;
-  padding: 1rem;
+  display: block;
   box-sizing: border-box;
+  padding: 1rem;
   background: linear-gradient(91deg, #261733, #151a3f);
   border-radius: 1rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -38,11 +34,15 @@
   }
 }
 
+.banner:hover .banner-content {
+  background: linear-gradient(90deg, rgb(117 0 219 / 32%) 0%, rgb(94 24 164 / 32.8%) 49%, rgb(0 54 124 / 36.1%) 100%);
+}
+
 .banner__title,
 .banner__subtitle {
   margin: .25rem;
-  text-align: left;
   font-size: 1.25rem;
+  text-align: left;
   color: var(--color-white);
 }
 
@@ -54,7 +54,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1rem;
-  background-color: rgba(128,128,128,0.3);
+  background-color: rgb(128 128 128 / 30%);
 }
 
 .banner .banner__more-btn:hover {

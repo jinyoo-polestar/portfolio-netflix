@@ -11,21 +11,21 @@
 
 .benefit__item {
   display: flex;
-  flex-direction: column;
-  width: calc(25% - 1rem);
-  flex-shrink: 1;
   min-width: 15rem;
   min-height: 20rem;
-  padding: 2rem 1.5rem;
+  flex-direction: column;
+  flex-shrink: 1;
   box-sizing: border-box;
+  padding: 2rem 1.5rem;
   background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
   border-radius: 1rem;
+  width: calc(25% - 1rem);
 }
 
 @media screen and (max-width: 1280px) {
   .benefit__item {
-    flex: 1 1 calc(50% - .5rem);
     min-height: unset;
+    flex: 1 1 calc(50% - .5rem);
   }
 }
 

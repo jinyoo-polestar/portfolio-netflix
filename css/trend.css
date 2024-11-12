@@ -14,8 +14,8 @@
 }
 
 .trend__slider {
-  display: flex;
   position: relative;
+  display: flex;
   width: 100%;
   overflow: hidden scroll;
 }
@@ -30,13 +30,13 @@
 }
 
 .slider__card {
-  display: block;
   position: relative;
-  width: 13.75rem;
+  display: block;
   height: 19.6875rem;
-  align-content: center;
   margin: 0 0 0 2rem;
   border-radius: .5rem;
+  width: 13.75rem;
+  align-content: center;
   cursor: pointer;
 }
 
@@ -60,18 +60,18 @@
 }
 
 .slider__btn-left, .slider__btn-right  {
-  display: none;
   position: sticky;
-  width: 1.5rem;
+  display: none;
   height: 7.5rem;
-  align-items: center;
   justify-content: center;
-  border-radius: .5rem;
+  align-items: center;
+  z-index: 1;
   background-color: var(--color-gray);
+  border-radius: .5rem;
+  width: 1.5rem;
   transform: translateY(50%);
   transition: opacity 400ms ease-in-out;
   cursor: pointer;
-  z-index: 1;
 }
 
 .slider__btn-left {

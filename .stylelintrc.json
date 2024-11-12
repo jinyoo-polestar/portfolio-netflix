@@ -1,0 +1,109 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
+    "media-feature-range-notation": null,
+    "order/order": [
+      "custom-properties"
+    ],
+    "order/properties-order": [
+      {
+        "groupName":"position",
+        "emptyLineBefore": "never",
+        "properties": [
+          "position",
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ]
+      },
+      {
+        "groupName":"layout",
+        "emptyLineBefore": "never",
+        "properties": [
+          "display",
+          "Width",
+          "height",
+          "min-width",
+          "min-height",
+          "max-width",
+          "max-height",
+          "flex",
+          "flex-direction",
+          "flex-wrap",
+          "gap",
+          "justify-content",
+          "align-items",
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis",
+          "box-sizing",
+          "z-index"
+        ]
+      },
+      {
+        "groupName": "spacing",
+        "emptyLineBefore": "never",
+        "properties": [
+          "margin",
+          "margin-top",
+          "margin-right",
+          "margin-bottom",
+          "margin-left",
+          "padding",
+          "padding-top",
+          "padding-right",
+          "padding-bottom",
+          "padding-left"
+        ]
+      },
+      {
+        "groupName":"background",
+        "emptyLineBefore": "never",
+        "properties": [
+          "background",
+          "background-image",
+          "background-position",
+          "background-size",
+          "background-origin",
+          "background-repeat",
+          "background-color",
+          "box-shadow",
+          "opacity"
+        ]
+      },
+      {
+        "groupName": "border",
+        "emptyLineBefore": "never",
+        "properties": [
+          "border",
+          "border-width",
+          "border-style",
+          "border-color",
+          "border-radius"
+        ]
+      },
+      {
+        "groupName":"font",
+        "emptyLineBefore": "never",
+        "properties": [
+          "font",
+          "font-family",
+          "word-break",
+          "word-wrap",
+          "font-size",
+          "font-weight",
+          "text-align",
+          "line-height",
+          "text-decoration",
+          "list-style",
+          "color"
+        ]
+      }
+    ]
+  }
+
+}

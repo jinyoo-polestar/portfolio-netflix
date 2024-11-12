@@ -4,20 +4,17 @@
 
 .footer__title {
   margin-bottom: 2.5rem;
-  text-align: left;
   font-size: .875rem;
+  text-align: left;
   color: var(--color-light-gray);
 }
 
-.footer__info {
+.footer__info, .footer__site {
   margin: .25rem .25rem .25rem 0;
-  text-align: left;
   font-size: .75rem;
+  text-align: left;
 }
 
 .footer__site {
-  margin: .25rem .25rem .25rem 0;
-  text-align: left;
   text-decoration: underline;
-  font-size: .75rem;
 }
