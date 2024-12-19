@@ -267,10 +267,11 @@
   }
 }
 
-.banner__image {
-  position: absolute;
-  top: -2rem;
-  left: 1rem;
+.banner__img {
+  position: relative;
+  width: 4.8125rem;
+  height: 4.8125rem;
+  background: url("../images/img_popcorn.png") no-repeat;
   z-index: 1;
 }
 

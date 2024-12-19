@@ -24,9 +24,11 @@ document.addEventListener("click", (event) => {
   if (event.target.classList.contains("qna__question")) {
     const questionItem = event.target.closest(".qna__item");
 
-    document
-      .querySelectorAll(".qna__item")
-      .forEach((item) => item.removeAttribute("open"));
+    document.querySelectorAll(".qna__item").forEach((item) => {
+      if (item !== questionItem) {
+        item.removeAttribute("open");
+      }
+    });
   }
 });
 
