@@ -360,6 +360,7 @@
 }
 
 .slider__right-btn {
+  display: flex;
   right: 0;
 }
 

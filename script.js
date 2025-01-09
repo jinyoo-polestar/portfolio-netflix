@@ -68,4 +68,6 @@ $rightBtn.addEventListener("click", function () {
 
 $sliderWrapper.addEventListener("scroll", setSliderButtonsVisible);
 
-setSliderButtonsVisible();
+window.addEventListener("load", function () {
+  setSliderButtonsVisible();
+});
