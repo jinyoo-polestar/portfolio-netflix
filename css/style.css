@@ -469,6 +469,10 @@
   font-size: 0;
 }
 
+.qna__question::-webkit-details-marker {
+  display: none;
+}
+
 .qna__question:hover {
   background-color: var(--color-light-gray);
 }
