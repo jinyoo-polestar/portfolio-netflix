@@ -4,6 +4,8 @@ const $signupEmailLabels = document.querySelectorAll(".signup__label");
 const $sliderWrapper = document.querySelector(".trend__slider");
 const $leftBtn = document.querySelector(".slider__left-btn");
 const $rightBtn = document.querySelector(".slider__right-btn");
+let dragstartPoint = 0;
+let dragendPoint = 0;
 
 $signupEmailInputs.forEach(($input, index) => {
   const $signupEmailLabel = $signupEmailLabels[index];
@@ -28,6 +30,27 @@ document.addEventListener("click", (event) => {
       if (item !== questionItem) {
         item.removeAttribute("open");
       }
+    });
+  }
+});
+
+// Slider - drag event
+$sliderWrapper.addEventListener("mousedown", (e) => {
+  dragstartPoint = e.pageX;
+});
+
+$sliderWrapper.addEventListener("mouseup", (e) => {
+  dragendPoint = e.pageX;
+
+  if (dragstartPoint < dragendPoint) {
+    $sliderWrapper.scrollBy({
+      left: dragendPoint - dragstartPoint,
+      behavior: "smooth",
+    });
+  } else {
+    $sliderWrapper.scrollBy({
+      left: -(dragstartPoint - dragendPoint),
+      behavior: "smooth",
     });
   }
 });
